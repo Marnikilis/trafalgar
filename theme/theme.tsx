@@ -50,7 +50,6 @@ const theme = extendTheme({
           border: "none",
         },
         point: {
-          bg: "rgba(91, 155, 243, 0.3)",
           borderRadius: "50%",
           border: "none",
         },
