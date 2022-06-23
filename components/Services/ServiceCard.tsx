@@ -1,10 +1,16 @@
 import React from "react";
 import { Flex, Container, Heading, Text, Image } from "@chakra-ui/react";
 
-const ServiceCard = () => {
+interface ServiceProps {
+  photoSrc: string;
+  heading: string;
+  text: string;
+}
+
+const ServiceCard = ({ photoSrc, heading, text }: ServiceProps) => {
   return (
     <Container
-      w={"350px"}
+      w={{ sm: "100%", md: "350px" }}
       boxShadow={"10px 40px 50px rgba(229, 233, 246, 0.4)"}
       borderRadius={"20px"}
       position={"relative"}
@@ -12,12 +18,9 @@ const ServiceCard = () => {
       bg={"#fff"}
     >
       <Flex direction={"column"} alignItems={"start"} gap={"20px"} p={"40px"}>
-        <Image src="/services/search.svg" h={"90px"} />
-        <Heading variant={"h3"}>Search doctor</Heading>
-        <Text variant={"caption"}>
-          Choose your doctor from thousands of specialist, general, and trusted
-          hospitals
-        </Text>
+        <Image src={photoSrc} h={"90px"} />
+        <Heading variant={"h3"}>{heading}</Heading>
+        <Text variant={"caption"}>{text}</Text>
       </Flex>
     </Container>
   );

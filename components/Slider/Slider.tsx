@@ -18,13 +18,14 @@ const Slider = () => {
         position={"absolute"}
         top={"55%"}
         left={"-4%"}
+        display={{ sm: "none", xl: "block" }}
       />
       <Flex
         direction={"column"}
         alignItems={"center"}
         gap={"25px"}
         py={"60px"}
-        px={"118px"}
+        px={{ sm: "20px", md: "50px", lg: "70px", xl: "118px" }}
         borderRadius={24}
         bg={"linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%)"}
         color={"#fff"}
@@ -35,15 +36,16 @@ const Slider = () => {
         overflow={"hidden"}
       >
         <Heading variant={"h2"}>What our customer are saying</Heading>
-        <Box textStyle={"line"} bg={"#fff"} mb={"66px"} />
+        <Box textStyle={"line"} bg={"#fff"} mb={{ sm: "20px", lg: "66px" }} />
         <Flex
           alignItems={"center"}
           justifyContent={"space-between"}
           direction={{ sm: "column", lg: "row" }}
+          gap={"40px"}
         >
-          <Flex alignItems={"center"}>
+          <Flex alignItems={"center"} direction={{ sm: "column", md: "row" }}>
             <Image src="/avatar.png" h={133} mr={30} />
-            <Flex direction={"column"} w={"100%"} gap={"5px"}>
+            <Flex direction={"column"} gap={"5px"}>
               <Text fontWeight={"700"} fontSize={"22px"} color={"#fff"}>
                 Edward Newgate
               </Text>
@@ -52,7 +54,7 @@ const Slider = () => {
               </Text>
             </Flex>
           </Flex>
-          <Text variant={"sliderText"} w={"50%"}>
+          <Text variant={"sliderText"} w={{ sm: "100%", lg: "50%" }}>
             “Our dedicated patient engagement app and web portal allow you to
             access information instantaneously (no tedeous form, long calls, or
             administrative hassle) and securely”

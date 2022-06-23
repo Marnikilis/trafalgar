@@ -18,10 +18,11 @@ const Footer = () => {
         position={"absolute"}
         top={"-15%"}
         right={0}
+        display={{ sm: "none", xl: "block" }}
       />
       <Flex
         bg={"linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%)"}
-        h={"432px"}
+        minH={"432px"}
         alignItems={"center"}
         pos={"relative"}
         zIndex={160}
@@ -31,10 +32,18 @@ const Footer = () => {
           position={"absolute"}
           top={"77%"}
           left={"-2%"}
+          display={{ sm: "none", xl: "block" }}
         />
         <Container maxW={"container.xl"} px={15}>
-          <Flex justifyContent={"space-between"} py={"56px"} color={"#fff"}>
-            <Flex direction={"column"} w={"30%"}>
+          <Flex
+            rowGap={{ sm: "50px", lg: "145px" }}
+            columnGap={{ sm: "50px" }}
+            justifyContent={"space-between"}
+            py={"56px"}
+            color={"#fff"}
+            wrap={"wrap"}
+          >
+            <Flex direction={"column"} w={{ sm: "100%", md: "30%" }}>
               <Link href={"/"} mb={"20px"}>
                 <Logo
                   color={"#fff"}
