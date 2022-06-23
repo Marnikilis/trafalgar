@@ -40,13 +40,18 @@ const Services = () => {
 
   return (
     <Box position={"relative"} mb={"80px"}>
-      <Image src="/page/servicesBg.svg" position={"absolute"} top={"-10%"} />
+      <Image
+        src="/page/servicesBg.svg"
+        position={"absolute"}
+        top={"-10%"}
+        display={{ base: "none", md: "block" }}
+      />
       <Image
         src="/page/pointsBg.svg"
         position={"absolute"}
         top={"52%"}
         right={"8%"}
-        display={{ sm: "none", xl: "block" }}
+        display={{ base: "none", xl: "block" }}
       />
       <Container maxW={"1125px"} px={15} position={"relative"} zIndex={60}>
         <Flex direction={"column"} alignItems={"center"} gap={10}>

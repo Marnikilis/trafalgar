@@ -25,15 +25,16 @@ const Articles = () => {
       <Image
         src="/page/articlesBg.svg"
         position={"absolute"}
-        top={"-10%"}
+        top={{ lg: "10%", xl: "-10%" }}
         right={0}
+        display={{ base: "none", lg: "block" }}
       />
       <Image
         src="/page/pointsBg.svg"
         position={"absolute"}
         top={"10%"}
         left={"9%"}
-        display={{ sm: "none", xl: "block" }}
+        display={{ base: "none", xl: "block" }}
       />
       <Container maxW={"1125px"} px={15}>
         <Flex direction={"column"} alignItems={"center"} gap={10}>

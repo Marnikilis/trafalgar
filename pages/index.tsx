@@ -26,14 +26,14 @@ const Home: NextPage = () => {
           position={"absolute"}
           top={"130px"}
           left={"-4%"}
-          display={{ sm: "none", xl: "block" }}
+          display={{ base: "none", xl: "block" }}
         />
         <Container maxW={"container.xl"} px={15}>
           <Flex
             gap={"110px"}
             alignItems={"center"}
             mb={"190px"}
-            direction={{ sm: "column-reverse", lg: "row" }}
+            direction={{ base: "column-reverse", lg: "row" }}
           >
             <Flex direction={"column"} gap={"25px"}>
               <Heading variant={"h1"}>Virtual healthcare for you</Heading>
@@ -65,6 +65,7 @@ const Home: NextPage = () => {
             position={"absolute"}
             top={"70%"}
             right={"-10%"}
+            display={{ base: "none", xl: "block" }}
           />
         </Container>
         <Container maxW={"container.xl"} px={15} mb={100}>

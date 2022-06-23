@@ -23,7 +23,7 @@ const Description = ({
       alignItems={"center"}
       mb={"190px"}
       direction={{
-        sm: "column-reverse",
+        base: "column-reverse",
         lg: `row${rowRev ? "-reverse" : ""}`,
       }}
     >
@@ -35,7 +35,7 @@ const Description = ({
           {btnText}
         </Button>
       </Flex>
-      <Image src={img} width={{ sm: "90%", md: "50%" }} />
+      <Image src={img} width={{ base: "90%", md: "50%" }} />
     </Flex>
   );
 };

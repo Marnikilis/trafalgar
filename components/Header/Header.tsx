@@ -16,7 +16,7 @@ const Header = () => {
         <Flex
           gap={"40px"}
           fontSize={"18px"}
-          display={{ sm: "none", lg: "flex" }}
+          display={{ base: "none", sm: "none", lg: "flex" }}
         >
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/findadoctor"}>Find a doctor</NavLink>

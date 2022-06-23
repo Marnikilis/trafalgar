@@ -18,14 +18,14 @@ const Slider = () => {
         position={"absolute"}
         top={"55%"}
         left={"-4%"}
-        display={{ sm: "none", xl: "block" }}
+        display={{ base: "none", xl: "block" }}
       />
       <Flex
         direction={"column"}
         alignItems={"center"}
         gap={"25px"}
         py={"60px"}
-        px={{ sm: "20px", md: "50px", lg: "70px", xl: "118px" }}
+        px={{ base: "20px", md: "50px", lg: "70px", xl: "118px" }}
         borderRadius={24}
         bg={"linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%)"}
         color={"#fff"}
@@ -35,15 +35,17 @@ const Slider = () => {
         zIndex={60}
         overflow={"hidden"}
       >
-        <Heading variant={"h2"}>What our customer are saying</Heading>
-        <Box textStyle={"line"} bg={"#fff"} mb={{ sm: "20px", lg: "66px" }} />
+        <Heading variant={"h2"} textAlign={"center"}>
+          What our customer are saying
+        </Heading>
+        <Box textStyle={"line"} bg={"#fff"} mb={{ base: "20px", lg: "66px" }} />
         <Flex
           alignItems={"center"}
           justifyContent={"space-between"}
-          direction={{ sm: "column", lg: "row" }}
+          direction={{ base: "column", lg: "row" }}
           gap={"40px"}
         >
-          <Flex alignItems={"center"} direction={{ sm: "column", md: "row" }}>
+          <Flex alignItems={"center"} direction={{ base: "column", md: "row" }}>
             <Image src="/avatar.png" h={133} mr={30} />
             <Flex direction={"column"} gap={"5px"}>
               <Text fontWeight={"700"} fontSize={"22px"} color={"#fff"}>
@@ -65,6 +67,7 @@ const Slider = () => {
           position={"absolute"}
           top={"-5%"}
           right={"-5%"}
+          display={{ base: "none", md: "block" }}
         />
       </Flex>
       <Flex

@@ -18,7 +18,7 @@ const Footer = () => {
         position={"absolute"}
         top={"-15%"}
         right={0}
-        display={{ sm: "none", xl: "block" }}
+        display={{ base: "none", xl: "block" }}
       />
       <Flex
         bg={"linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%)"}
@@ -32,12 +32,12 @@ const Footer = () => {
           position={"absolute"}
           top={"77%"}
           left={"-2%"}
-          display={{ sm: "none", xl: "block" }}
+          display={{ base: "none", xl: "block" }}
         />
         <Container maxW={"container.xl"} px={15}>
           <Flex
-            rowGap={{ sm: "50px", lg: "145px" }}
-            columnGap={{ sm: "50px" }}
+            rowGap={{ base: "50px", lg: "145px" }}
+            columnGap={{ base: "50px" }}
             justifyContent={"space-between"}
             py={"56px"}
             color={"#fff"}
