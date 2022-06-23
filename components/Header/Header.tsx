@@ -3,10 +3,14 @@ import Logo from "../Logo";
 import { Container, Flex, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from "../UI/NavLink/NavLink";
+import { Backdrop } from "./Backdrop/Backdrop";
 
 const Header = () => {
   const [transform, setTransform] = useState("translateX(100%)");
 
+  const menuCloseHandler = () => {
+    setTransform("translateX(100%)");
+  };
   return (
     <Container maxW={"container.xl"} px={15} pos={"relative"}>
       <Flex justifyContent={"space-between"} alignItems={"center"} py={"56px"}>
@@ -65,11 +69,12 @@ const Header = () => {
               zIndex={200}
               bg={"none"}
               icon={<CloseIcon />}
-              onClick={() => setTransform("translateX(100%)")}
+              onClick={menuCloseHandler}
             />
           </Flex>
         </Flex>
       </Flex>
+      {transform === "translate(0)" && <Backdrop onClick={menuCloseHandler} />}
     </Container>
   );
 };
