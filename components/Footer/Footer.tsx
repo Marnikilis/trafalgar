@@ -37,8 +37,8 @@ const Footer = () => {
         <Container maxW={"container.xl"} px={15}>
           <Flex
             rowGap={{ base: "50px", lg: "145px" }}
-            columnGap={{ base: "50px" }}
-            justifyContent={"space-between"}
+            columnGap={{ base: "70px" }}
+            justifyContent={{ base: "flex-start", md: "space-between" }}
             py={"56px"}
             color={"#fff"}
             wrap={"wrap"}
