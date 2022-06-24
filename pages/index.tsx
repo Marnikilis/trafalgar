@@ -32,11 +32,13 @@ const Home: NextPage = () => {
           <Flex
             gap={"110px"}
             alignItems={"center"}
-            mb={"190px"}
+            mb={{ base: "70px", xl: "190px" }}
             direction={{ base: "column-reverse", lg: "row" }}
           >
             <Flex direction={"column"} gap={"25px"}>
-              <Heading variant={"h1"}>Virtual healthcare for you</Heading>
+              <Heading variant={{ base: "h2", lg: "h1" }}>
+                Virtual healthcare for you
+              </Heading>
               <Text variant={"mainText"} mb={"20px"}>
                 Trafalgar provides progressive, and affordable healthcare,
                 accessible on mobile and online for everyone
@@ -68,7 +70,11 @@ const Home: NextPage = () => {
             display={{ base: "none", xl: "block" }}
           />
         </Container>
-        <Container maxW={"container.xl"} px={15} mb={100}>
+        <Container
+          maxW={"container.xl"}
+          px={15}
+          mb={{ base: "70px", xl: "190px" }}
+        >
           <Description
             heading={"Download our mobile apps"}
             icon={<Arrow />}

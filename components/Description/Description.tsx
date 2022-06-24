@@ -21,7 +21,7 @@ const Description = ({
     <Flex
       gap={"100px"}
       alignItems={"center"}
-      mb={"190px"}
+      mb={{ base: "70px", xl: "190px" }}
       direction={{
         base: "column-reverse",
         lg: `row${rowRev ? "-reverse" : ""}`,
