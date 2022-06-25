@@ -10,14 +10,19 @@ interface ServiceProps {
 const ServiceCard = ({ photoSrc, heading, text }: ServiceProps) => {
   return (
     <Container
-      w={{ sm: "100%", md: "350px" }}
-      boxShadow={"10px 40px 50px rgba(229, 233, 246, 0.4)"}
+      w={{ base: "90%", xl: "350px" }}
+      boxShadow={"5px 20px 30px rgba(229, 233, 246,1)"}
       borderRadius={"20px"}
       position={"relative"}
       zIndex={60}
       bg={"#fff"}
     >
-      <Flex direction={"column"} alignItems={"start"} gap={"20px"} p={"40px"}>
+      <Flex
+        direction={"column"}
+        alignItems={"start"}
+        gap={"20px"}
+        p={{ base: "20px", xl: "40px" }}
+      >
         <Image src={photoSrc} h={"90px"} />
         <Heading variant={"h3"}>{heading}</Heading>
         <Text variant={"caption"}>{text}</Text>

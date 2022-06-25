@@ -44,17 +44,21 @@ const Services = () => {
         src="/page/servicesBg.svg"
         position={"absolute"}
         top={"-10%"}
-        display={{ base: "none", md: "block" }}
+        display={{ base: "none", xl: "block" }}
       />
       <Image
         src="/page/pointsBg.svg"
         position={"absolute"}
         top={"52%"}
         right={"8%"}
-        display={{ base: "none", xl: "block" }}
+        display={{ base: "none", "3xl": "block" }}
       />
       <Container maxW={"1125px"} px={15} position={"relative"} zIndex={60}>
-        <Flex direction={"column"} alignItems={"center"} gap={10}>
+        <Flex
+          direction={"column"}
+          alignItems={{ base: "start", xl: "center" }}
+          gap={10}
+        >
           <Heading textStyle={"h2"}>Our services</Heading>
           <Box textStyle={"line"} />
           <Box textStyle={"text"} mb={"80px"}>
@@ -63,7 +67,7 @@ const Services = () => {
             qualified doctors you can consult with us which type of service is
             suitable for your health
           </Box>
-          <Flex wrap={"wrap"} gap={"17px"}>
+          <Flex wrap={"wrap"} gap={"17px"} mb={"40px"}>
             {services.map((service, i) => {
               return (
                 <ServiceCard
@@ -75,7 +79,9 @@ const Services = () => {
               );
             })}
           </Flex>
-          <Button size={"xl"}>Learn more</Button>
+          <Button size={"xl"} alignSelf={"center"}>
+            Learn more
+          </Button>
         </Flex>
       </Container>
     </Box>

@@ -21,26 +21,32 @@ const Articles = () => {
     },
   ];
   return (
-    <Box position={"relative"} mb={"80px"} overflow={"hidden"}>
+    <Box
+      position={"relative"}
+      mb={{ base: "100px", "3xl": "190px" }}
+      overflow={"hidden"}
+    >
       <Image
         src="/page/articlesBg.svg"
         position={"absolute"}
-        top={{ lg: "10%", xl: "-10%" }}
+        top={{ "2xl": "10%", "3xl": "-10%" }}
         right={0}
-        display={{ base: "none", lg: "block" }}
+        display={{ base: "none", "2xl": "block" }}
       />
       <Image
         src="/page/pointsBg.svg"
         position={"absolute"}
         top={"10%"}
         left={"9%"}
-        display={{ base: "none", xl: "block" }}
+        display={{ base: "none", "3xl": "block" }}
       />
       <Container maxW={"1125px"} px={15}>
         <Flex direction={"column"} alignItems={"center"} gap={10}>
-          <Heading variant={"h2"}>Check out our latest article</Heading>
-          <Box textStyle={"line"} />
-          <Flex wrap={"wrap"} gap={"17px"} mb={"70px"}>
+          <Heading variant={"h2"} alignSelf={{ base: "start", xl: "center" }}>
+            Check out our latest article
+          </Heading>
+          <Box textStyle={"line"} alignSelf={{ base: "start", xl: "center" }} />
+          <Flex wrap={"wrap"} gap={"17px"} mb={"30px"}>
             {articles.map((article, i) => {
               return (
                 <ArticleCard

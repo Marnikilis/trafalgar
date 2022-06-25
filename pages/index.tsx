@@ -26,28 +26,32 @@ const Home: NextPage = () => {
           position={"absolute"}
           top={"130px"}
           left={"-4%"}
-          display={{ base: "none", xl: "block" }}
+          display={{ base: "none", "3xl": "block" }}
         />
         <Container maxW={"container.xl"} px={15}>
           <Flex
             gap={"110px"}
             alignItems={"center"}
-            mb={{ base: "70px", xl: "190px" }}
-            direction={{ base: "column-reverse", lg: "row" }}
+            mb={{ base: "70px", xl: "100px", "3xl": "190px" }}
+            direction={{ base: "column-reverse", "2xl": "row" }}
           >
             <Flex direction={"column"} gap={"25px"}>
-              <Heading variant={{ base: "h2", lg: "h1" }}>
+              <Heading variant={{ base: "h2", "2xl": "h1" }}>
                 Virtual healthcare for you
               </Heading>
               <Text variant={"mainText"} mb={"20px"}>
                 Trafalgar provides progressive, and affordable healthcare,
                 accessible on mobile and online for everyone
               </Text>
-              <Button variant={"blue"} size={"xl"}>
+              <Button
+                variant={"blue"}
+                size={"xl"}
+                alignSelf={{ base: "center", xl: "start" }}
+              >
                 Consult today
               </Button>
             </Flex>
-            <Image src="/page/virtualhc.png" width={{ sm: "90%", md: "50%" }} />
+            <Image src="/page/virtualhc.png" width={{ sm: "90%", xl: "50%" }} />
           </Flex>
         </Container>
         <Services />
@@ -67,14 +71,10 @@ const Home: NextPage = () => {
             position={"absolute"}
             top={"70%"}
             right={"-10%"}
-            display={{ base: "none", xl: "block" }}
+            display={{ base: "none", "3xl": "block" }}
           />
         </Container>
-        <Container
-          maxW={"container.xl"}
-          px={15}
-          mb={{ base: "70px", xl: "190px" }}
-        >
+        <Container maxW={"container.xl"} px={15} mb={{ base: "70px" }}>
           <Description
             heading={"Download our mobile apps"}
             icon={<Arrow />}

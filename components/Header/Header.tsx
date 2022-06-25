@@ -13,14 +13,18 @@ const Header = () => {
   };
   return (
     <Container maxW={"container.xl"} px={15} pos={"relative"}>
-      <Flex justifyContent={"space-between"} alignItems={"center"} py={"56px"}>
+      <Flex
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        py={{ base: "15px", xl: "56px" }}
+      >
         <NavLink to={"/"}>
           <Logo />
         </NavLink>
         <Flex
           gap={"40px"}
           fontSize={"18px"}
-          display={{ base: "none", sm: "none", lg: "flex" }}
+          display={{ base: "none", "2xl": "flex" }}
         >
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/findadoctor"}>Find a doctor</NavLink>
@@ -32,12 +36,12 @@ const Header = () => {
           aria-label={"Open Menu"}
           size={"lg"}
           pos={"absolute"}
-          top={"50px"}
-          right={"10px"}
+          top={{ base: "15px", xl: "50px" }}
+          right={0}
           border={"none"}
           bg={"none"}
           icon={<HamburgerIcon />}
-          display={{ sm: "flex", lg: "none" }}
+          display={{ base: "flex", "2xl": "none" }}
           onClick={() => setTransform("translate(0)")}
         />
         <Flex
@@ -53,7 +57,7 @@ const Header = () => {
           py={"100px"}
           px={"50px"}
           fontSize={"18px"}
-          display={{ sm: "flex", lg: "none" }}
+          display={{ base: "flex", "2xl": "none" }}
           transform={transform}
         >
           <NavLink to={"/"}>Home</NavLink>

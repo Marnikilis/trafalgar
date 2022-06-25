@@ -20,7 +20,7 @@ const ArticleCard = ({ photoSrc, heading, text }: ArticleProps) => {
   return (
     <Flex
       direction={"column"}
-      w={{ sm: "100%", md: "350px" }}
+      w={{ base: "100%", xl: "350px" }}
       alignItems={"start"}
       p={"0"}
       boxShadow={"10px 40px 50px rgba(229, 233, 246, 0.4)"}

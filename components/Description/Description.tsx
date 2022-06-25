@@ -21,21 +21,25 @@ const Description = ({
     <Flex
       gap={"100px"}
       alignItems={"center"}
-      mb={{ base: "70px", xl: "190px" }}
+      mb={{ base: "70px", "3xl": "190px" }}
       direction={{
         base: "column-reverse",
-        lg: `row${rowRev ? "-reverse" : ""}`,
+        "3xl": `row${rowRev ? "-reverse" : ""}`,
       }}
     >
       <Flex direction={"column"} gap={"25px"}>
         <Heading variant={"h2"}>{heading}</Heading>
         <Box textStyle={"line"} />
         <Text mb={"20px"}>{text}</Text>
-        <Button size={"xl"} rightIcon={icon}>
+        <Button
+          size={"xl"}
+          rightIcon={icon}
+          alignSelf={{ base: "center", xl: "start" }}
+        >
           {btnText}
         </Button>
       </Flex>
-      <Image src={img} width={{ base: "90%", md: "50%" }} />
+      <Image src={img} width={{ base: "90%", xl: "50%" }} />
     </Flex>
   );
 };

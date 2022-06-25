@@ -37,7 +37,7 @@ const Slider = () => {
     <Container
       maxW={"container.xl"}
       mb={100}
-      px={{ base: "15px", md: "35px", xl: "50px" }}
+      px={{ base: "15px", xl: "35px", "3xl": "50px" }}
       pos={"relative"}
     >
       <Flex
@@ -45,16 +45,16 @@ const Slider = () => {
         m={"0 auto"}
         ref={carouselRef}
         overflow={"hidden"}
-        maxW={"1124px"}
+        maxW={"1125px"}
       >
         <Image
           src="/page/pointsBg.svg"
           position={"absolute"}
           top={"55%"}
           left={0}
-          display={{ base: "none", xl: "block" }}
+          display={{ base: "none", "3xl": "block" }}
         />
-        <Flex ref={cardsRef} transition={"all 0.5s"}>
+        <Flex ref={cardsRef} transition={"all 0.5s"} w={"100%"}>
           {items.map((item, i) => {
             return (
               <Flex
@@ -62,41 +62,40 @@ const Slider = () => {
                 direction={"column"}
                 alignItems={"center"}
                 gap={"25px"}
-                py={"60px"}
-                px={{ base: "20px", md: "50px", lg: "70px", xl: "118px" }}
+                py={{ base: "20px", xl: "60px" }}
+                px={{ base: "20px", xl: "50px", "2xl": "70px", "3xl": "118px" }}
                 borderRadius={24}
                 bg={item.bgColor}
                 color={"#fff"}
-                flex={{
-                  base: "0 0 290px",
-                  md: "0 0 700px",
-                  lg: "0 0 920px",
-                  xl: "0 0 1124px",
-                }}
+                flexBasis={"100%"}
+                flexGrow={0}
+                flexShrink={0}
                 mb={"20px"}
-                minH={"430px"}
-                // width={"1124px"}
+                maxH={{ base: "100%", "2xl": "430px" }}
                 pos={"relative"}
                 zIndex={60}
                 overflow={"hidden"}
               >
-                <Heading variant={"h2"} textAlign={"center"}>
+                <Heading
+                  variant={{ base: "h3", xl: "h2" }}
+                  textAlign={"center"}
+                >
                   What our customer are saying
                 </Heading>
                 <Box
                   textStyle={"line"}
                   bg={"#fff"}
-                  mb={{ base: "20px", lg: "66px" }}
+                  mb={{ base: "20px", "2xl": "66px" }}
                 />
                 <Flex
                   alignItems={"center"}
                   justifyContent={"space-between"}
-                  direction={{ base: "column", lg: "row" }}
+                  direction={{ base: "column", "2xl": "row" }}
                   gap={"40px"}
                 >
                   <Flex
                     alignItems={"center"}
-                    direction={{ base: "column", md: "row" }}
+                    direction={{ base: "column", xl: "row" }}
                   >
                     <Image src="/avatar.png" h={133} mr={30} />
                     <Flex direction={"column"} gap={"5px"}>
@@ -108,7 +107,10 @@ const Slider = () => {
                       </Text>
                     </Flex>
                   </Flex>
-                  <Text variant={"sliderText"} w={{ sm: "100%", lg: "50%" }}>
+                  <Text
+                    variant={"sliderText"}
+                    w={{ base: "100%", "2xl": "50%" }}
+                  >
                     “Our dedicated patient engagement app and web portal allow
                     you to access information instantaneously (no tedeous form,
                     long calls, or administrative hassle) and securely”
@@ -119,7 +121,7 @@ const Slider = () => {
                   position={"absolute"}
                   top={"-5%"}
                   right={"-5%"}
-                  display={{ base: "none", md: "block" }}
+                  display={{ base: "none", xl: "block" }}
                 />
               </Flex>
             );
@@ -129,7 +131,7 @@ const Slider = () => {
             position={"absolute"}
             top={"-5%"}
             right={"-5%"}
-            display={{ base: "none", md: "block" }}
+            display={{ base: "none", xl: "block" }}
           />
         </Flex>
         <Flex
