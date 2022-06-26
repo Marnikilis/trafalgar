@@ -22,7 +22,6 @@ const ArticleCard = ({ photoSrc, heading, text }: ArticleProps) => {
       direction={"column"}
       w={{ base: "100%", xl: "350px" }}
       alignItems={"start"}
-      p={"0"}
       boxShadow={"10px 40px 50px rgba(229, 233, 246, 0.4)"}
       borderRadius={"20px"}
       position={"relative"}

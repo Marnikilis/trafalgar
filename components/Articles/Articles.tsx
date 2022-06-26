@@ -54,7 +54,13 @@ const Articles = () => {
             alignSelf={{ base: "start", xl: "center" }}
             mb={"80px"}
           />
-          <Flex wrap={"wrap"} gap={"17px"} mb={"70px"}>
+          <Flex
+            wrap={"wrap"}
+            gap={"17px"}
+            mb={"70px"}
+            // justifyContent={{ base: "center", "2xl": "start" }}
+            // px={{ base: "50px" }}
+          >
             {articles.map((article, i) => {
               return (
                 <ArticleCard
