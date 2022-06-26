@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Button,
@@ -36,7 +36,7 @@ const Slider = () => {
   return (
     <Container
       maxW={"container.xl"}
-      mb={100}
+      mb={{ base: "100", "3xl": "220px" }}
       px={{ base: "15px", xl: "35px", "3xl": "50px" }}
       pos={"relative"}
     >
@@ -61,16 +61,15 @@ const Slider = () => {
                 key={i}
                 direction={"column"}
                 alignItems={"center"}
-                gap={"25px"}
-                py={{ base: "20px", xl: "60px" }}
-                px={{ base: "20px", xl: "50px", "2xl": "70px", "3xl": "118px" }}
+                py={{ base: "20px", xl: "75px" }}
+                px={{ base: "20px", xl: "50px", "2xl": "70px", "3xl": "120px" }}
                 borderRadius={24}
                 bg={item.bgColor}
                 color={"#fff"}
                 flexBasis={"100%"}
                 flexGrow={0}
                 flexShrink={0}
-                mb={"20px"}
+                mb={"45px"}
                 maxH={{ base: "100%", "2xl": "430px" }}
                 pos={"relative"}
                 zIndex={60}
@@ -78,6 +77,7 @@ const Slider = () => {
               >
                 <Heading
                   variant={{ base: "h3", xl: "h2" }}
+                  mb={"30px"}
                   textAlign={"center"}
                 >
                   What our customer are saying
@@ -85,7 +85,7 @@ const Slider = () => {
                 <Box
                   textStyle={"line"}
                   bg={"#fff"}
-                  mb={{ base: "20px", "2xl": "66px" }}
+                  mb={{ base: "20px", "3xl": "70px" }}
                 />
                 <Flex
                   alignItems={"center"}
@@ -96,8 +96,9 @@ const Slider = () => {
                   <Flex
                     alignItems={"center"}
                     direction={{ base: "column", xl: "row" }}
+                    marginRight={{ base: "20px", "3xl": "100px" }}
                   >
-                    <Image src="/avatar.png" h={133} mr={30} />
+                    <Image src="/avatar.png" h={"133px"} mr={"30px"} />
                     <Flex direction={"column"} gap={"5px"}>
                       <Text fontWeight={"700"} fontSize={"22px"} color={"#fff"}>
                         Edward Newgate
@@ -109,7 +110,7 @@ const Slider = () => {
                   </Flex>
                   <Text
                     variant={"sliderText"}
-                    w={{ base: "100%", "2xl": "50%" }}
+                    w={{ base: "100%", "2xl": "60%", "3xl": "45%" }}
                   >
                     “Our dedicated patient engagement app and web portal allow
                     you to access information instantaneously (no tedeous form,

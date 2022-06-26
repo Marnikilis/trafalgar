@@ -107,6 +107,7 @@ const theme = extendTheme({
         },
         caption: {
           fontSize: "16px",
+          lineHeight: "1.7",
         },
       },
     },

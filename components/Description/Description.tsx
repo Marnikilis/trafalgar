@@ -21,13 +21,17 @@ const Description = ({
     <Flex
       gap={"100px"}
       alignItems={"center"}
-      mb={{ base: "70px", "3xl": "190px" }}
+      mb={{ base: "70px", xl: "100px", "2xl": "140px", "3xl": "230px" }}
       direction={{
         base: "column-reverse",
-        "3xl": `row${rowRev ? "-reverse" : ""}`,
+        "2xl": `row${rowRev ? "-reverse" : ""}`,
       }}
     >
-      <Flex direction={"column"} gap={"25px"}>
+      <Flex
+        direction={"column"}
+        gap={"25px"}
+        paddingLeft={{ base: "0", "3xl": "45px" }}
+      >
         <Heading variant={"h2"}>{heading}</Heading>
         <Box textStyle={"line"} />
         <Text mb={"20px"}>{text}</Text>
@@ -39,7 +43,7 @@ const Description = ({
           {btnText}
         </Button>
       </Flex>
-      <Image src={img} width={{ base: "90%", xl: "50%" }} />
+      <Image src={img} width={{ base: "90%", xl: "55%" }} />
     </Flex>
   );
 };

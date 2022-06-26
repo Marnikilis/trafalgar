@@ -1,5 +1,13 @@
 import React from "react";
-import { Flex, Heading, Container, Image, Box, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Container,
+  Image,
+  Box,
+  Button,
+  Text,
+} from "@chakra-ui/react";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -39,7 +47,10 @@ const Services = () => {
   ];
 
   return (
-    <Box position={"relative"} mb={"80px"}>
+    <Box
+      position={"relative"}
+      mb={{ base: "80px", xl: "100px", "2xl": "140px", "3xl": "220px" }}
+    >
       <Image
         src="/page/servicesBg.svg"
         position={"absolute"}
@@ -53,21 +64,23 @@ const Services = () => {
         right={"8%"}
         display={{ base: "none", "3xl": "block" }}
       />
-      <Container maxW={"1125px"} px={15} position={"relative"} zIndex={60}>
-        <Flex
-          direction={"column"}
-          alignItems={{ base: "start", xl: "center" }}
-          gap={10}
-        >
-          <Heading textStyle={"h2"}>Our services</Heading>
-          <Box textStyle={"line"} />
-          <Box textStyle={"text"} mb={"80px"}>
+      <Container maxW={"1125px"} px={"15px"} position={"relative"} zIndex={60}>
+        <Flex direction={"column"} alignItems={{ base: "start", xl: "center" }}>
+          <Heading textStyle={"h2"} mb={"35px"}>
+            Our services
+          </Heading>
+          <Box textStyle={"line"} mb={"40px"} />
+          <Text
+            mb={"80px"}
+            textAlign={{ base: "start", "3xl": "center" }}
+            px={{ base: "0", "3xl": "80px" }}
+          >
             We provide to you the best choiches for you. Adjust it to your
             health needs and make sure your undergo treatment with our highly
             qualified doctors you can consult with us which type of service is
             suitable for your health
-          </Box>
-          <Flex wrap={"wrap"} gap={"17px"} mb={"40px"}>
+          </Text>
+          <Flex wrap={"wrap"} gap={{ base: "30px", "3xl": "17px" }} mb={"70px"}>
             {services.map((service, i) => {
               return (
                 <ServiceCard

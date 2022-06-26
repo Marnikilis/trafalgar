@@ -31,11 +31,11 @@ const ArticleCard = ({ photoSrc, heading, text }: ArticleProps) => {
       overflow={"hidden"}
     >
       <Box bgImage={photoSrc} w={"100%"} h={"246px"} bgSize={"cover"} />
-      <Flex direction={"column"} alignItems={"start"} p={"20px"}>
-        <Heading variant={"h4"} mb={"12px"}>
+      <Flex direction={"column"} alignItems={"start"} p={"30px"}>
+        <Heading variant={"h4"} mb={"20px"}>
           {heading}
         </Heading>
-        <Text variant={"caption"} mb={"25px"}>
+        <Text variant={"caption"} mb={"30px"}>
           {text}
         </Text>
         <Button variant={"arrow"} p={0} rightIcon={<Arrow />}>

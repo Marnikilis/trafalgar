@@ -10,7 +10,7 @@ interface ServiceProps {
 const ServiceCard = ({ photoSrc, heading, text }: ServiceProps) => {
   return (
     <Container
-      w={{ base: "90%", xl: "350px" }}
+      w={{ base: "90%", "2xl": "47%", "3xl": "350px" }}
       boxShadow={"5px 20px 30px rgba(229, 233, 246,1)"}
       borderRadius={"20px"}
       position={"relative"}
@@ -20,8 +20,9 @@ const ServiceCard = ({ photoSrc, heading, text }: ServiceProps) => {
       <Flex
         direction={"column"}
         alignItems={"start"}
-        gap={"20px"}
-        p={{ base: "20px", xl: "40px" }}
+        gap={"30px"}
+        px={{ base: "20px", xl: "40px" }}
+        py={{ base: "20px", xl: "45px" }}
       >
         <Image src={photoSrc} h={"90px"} />
         <Heading variant={"h3"}>{heading}</Heading>

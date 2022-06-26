@@ -23,7 +23,7 @@ const Articles = () => {
   return (
     <Box
       position={"relative"}
-      mb={{ base: "100px", "3xl": "190px" }}
+      mb={{ base: "100px", "3xl": "200px" }}
       overflow={"hidden"}
     >
       <Image
@@ -36,17 +36,25 @@ const Articles = () => {
       <Image
         src="/page/pointsBg.svg"
         position={"absolute"}
-        top={"10%"}
+        top={"15%"}
         left={"9%"}
         display={{ base: "none", "3xl": "block" }}
       />
-      <Container maxW={"1125px"} px={15}>
-        <Flex direction={"column"} alignItems={"center"} gap={10}>
-          <Heading variant={"h2"} alignSelf={{ base: "start", xl: "center" }}>
+      <Container maxW={"1125px"} px={"15px"}>
+        <Flex direction={"column"} alignItems={"center"}>
+          <Heading
+            variant={"h2"}
+            alignSelf={{ base: "start", xl: "center" }}
+            mb={"35px"}
+          >
             Check out our latest article
           </Heading>
-          <Box textStyle={"line"} alignSelf={{ base: "start", xl: "center" }} />
-          <Flex wrap={"wrap"} gap={"17px"} mb={"30px"}>
+          <Box
+            textStyle={"line"}
+            alignSelf={{ base: "start", xl: "center" }}
+            mb={"80px"}
+          />
+          <Flex wrap={"wrap"} gap={"17px"} mb={"70px"}>
             {articles.map((article, i) => {
               return (
                 <ArticleCard

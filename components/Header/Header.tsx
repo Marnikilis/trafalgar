@@ -12,7 +12,7 @@ const Header = () => {
     setTransform("translateX(100%)");
   };
   return (
-    <Container maxW={"container.xl"} px={15} pos={"relative"}>
+    <Container maxW={"container.xl"} px={"15px"} pos={"relative"}>
       <Flex
         justifyContent={"space-between"}
         alignItems={"center"}
@@ -25,6 +25,7 @@ const Header = () => {
           gap={"40px"}
           fontSize={"18px"}
           display={{ base: "none", "2xl": "flex" }}
+          mr={{ base: "0px", "3xl": "30px" }}
         >
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/findadoctor"}>Find a doctor</NavLink>

@@ -28,11 +28,11 @@ const Home: NextPage = () => {
           left={"-4%"}
           display={{ base: "none", "3xl": "block" }}
         />
-        <Container maxW={"container.xl"} px={15}>
+        <Container maxW={"container.xl"} px={"15px"}>
           <Flex
             gap={"110px"}
             alignItems={"center"}
-            mb={{ base: "70px", xl: "100px", "3xl": "190px" }}
+            mb={{ base: "70px", xl: "100px", "2xl": "140px", "3xl": "220px" }}
             direction={{ base: "column-reverse", "2xl": "row" }}
           >
             <Flex direction={"column"} gap={"25px"}>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                 Consult today
               </Button>
             </Flex>
-            <Image src="/page/virtualhc.png" width={{ sm: "90%", xl: "50%" }} />
+            <Image src="/page/virtualhc.png" width={{ sm: "90%", xl: "55%" }} />
           </Flex>
         </Container>
         <Services />
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
             display={{ base: "none", "3xl": "block" }}
           />
         </Container>
-        <Container maxW={"container.xl"} px={15} mb={{ base: "70px" }}>
+        <Container maxW={"container.xl"} px={15}>
           <Description
             heading={"Download our mobile apps"}
             icon={<Arrow />}
