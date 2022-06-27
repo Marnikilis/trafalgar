@@ -51,7 +51,7 @@ const Slider = () => {
           src="/page/pointsBg.svg"
           position={"absolute"}
           top={"55%"}
-          left={0}
+          left={"2%"}
           display={{ base: "none", "3xl": "block" }}
         />
         <Flex ref={cardsRef} transition={"all 0.5s"} w={"100%"}>
@@ -120,20 +120,13 @@ const Slider = () => {
                 <Image
                   src="/page/lightPoints.svg"
                   position={"absolute"}
-                  top={"-5%"}
-                  right={"-5%"}
+                  top={"-4%"}
+                  right={"-4%"}
                   display={{ base: "none", xl: "block" }}
                 />
               </Flex>
             );
           })}
-          <Image
-            src="/page/lightPoints.svg"
-            position={"absolute"}
-            top={"-5%"}
-            right={"-5%"}
-            display={{ base: "none", xl: "block" }}
-          />
         </Flex>
         <Flex
           w={"100%"}

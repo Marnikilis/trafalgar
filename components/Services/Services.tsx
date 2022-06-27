@@ -60,7 +60,7 @@ const Services = () => {
       <Image
         src="/page/pointsBg.svg"
         position={"absolute"}
-        top={"52%"}
+        top={"48%"}
         right={"8%"}
         display={{ base: "none", "3xl": "block" }}
       />
